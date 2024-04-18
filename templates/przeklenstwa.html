@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<br>
+<br>
+{% for message in get_flashed_messages() %}
+<div class="alert alert-danger fade show" role="alert">
+    {{ message }}
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+
+{% endfor %}
+<h1>KOLEGO! Przeklinanie nie jest Sylwkastycznym zachowaniem!</h1>
+<br>
+<p>Sylwek nie jest z Ciebie zadowolony.</p>
+
+{% endblock %}

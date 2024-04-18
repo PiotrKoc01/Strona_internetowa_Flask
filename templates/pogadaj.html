@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<br>
+<br>
+<h2>Symulator rozmowy z Sylwkiem</h2>
+<br>
+<p>Niestety Sylwek nie jest zbyt zaawansowany (to tak jak w realu). </p>
+<html>
+<head>
+    <title>Formularz</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <input class="form-control" type="text" id="input_text" placeholder="Wpisz tekst...">
+    <button id="submit_button" class="btn btn-primary btn-lg">Wyślij</button>
+
+
+    <div id="conversation"></div>
+
+    <script>
+        $(document).ready(function(){
+            $('#submit_button').click(function(){
+                var input_text = $('#input_text').val();
+                var conversation = $('#conversation');
+                var my_message = $('<p>').html('<strong>Ty: </strong>' + input_text);
+                conversation.append(my_message);
+                $('#input_text').val(''); // Wyczyszczenie pola po wysłaniu
+
+                $.ajax({
+                    url: '/submit',
+                    type: 'POST',
+                    data: {input_text: input_text},
+                    success: function(response){
+                        setTimeout(function() {
+                            var sylwek_message = $('<p>').html('<strong>Sylwek: </strong>' + response.odpowiedz);
+                            conversation.append(sylwek_message);
+                        }, 1000);
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
+
+{% endblock %}

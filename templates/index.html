@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+    <br>
+    <br>
+    <h1>Witaj w Sylwkastycznej społecznosci!</h1>
+    <p>Strona jest wstępnym projektem, jest całkowicie bezpieczna. :3<p>
+    <br>
+    <br>
+    <img src="{{ url_for('static', filename='images/sywlek.jpg') }}" width="480">
+    <h3>Za co kochamy Sylwka?</h3>
+   <style>
+  p {
+    max-width: 800px; /* Maksymalna szerokość tagu <p> */
+     text-align: justify;
+      margin: 2 auto;
+  }
+</style>
+
+<body>
+
+<p>Sylwek ma wiele imion. Nie ważne jednak czy nazywasz go Sylwek, Sylwke, Szylwek,
+    Silikonowa nakładka czy nawet Ptyś- łączy nas niezwykła więź z tą słodką istotką. Więź tak silna że zaniepokoiłaby wielu
+    specjalistów. Ale nie nas. Kochamy go jak własną matkę. A w zasadzie bardziej, bo matki zazwyczaj nie są tak sylwkastyczne.
+    Niemniej poszukując genezy tego uczucia można dojść do niejasnych wniosków. Zdawać by się mogło, że każdy obdarował go
+    swym uczuciem za coś nieco innego. Wysówa się więc wniosek, że Sylwek w swoim brzuszku zawiera niezwykły pierwiastek kosmiczny,
+    który przyciąga każdego, ale indywidualnie na swój własny niepowtarzalny sposób.</p>
+
+
+<h5>Atrakcje i konkursy</h5>
+<p>Wszystko zależy od zainteresowania, niemniej zapraszamy do kliknięcia w zakładkę konkursy i atrakcje. Być może wygrasz
+sylwkastyczną nagrodę. Kto wie? Co więcej masz okazję na sylwkastyczną wróżbę!</p>
+<br><br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+{% endblock %}

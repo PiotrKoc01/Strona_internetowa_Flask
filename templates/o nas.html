@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<br>
+<br>
+<h2>Kim jesteśmy?</h2>
+<br>
+ <style>
+  p {
+    max-width: 800px; /* Maksymalna szerokość tagu <p> */
+     text-align: justify;
+      margin: 2 auto;
+  }
+</style>
+
+<body>
+<p>Jesteśmy Twoim najgorszym koszmarem. Nie zdradzimy tożsamości. Być może siedzimy obok Ciebie na zajęciach? Ale
+w to akurat można wątpić, bo nie masz przyjaciół i zwykle siedzisz sam. Możesz się jednak do nas skontaktować używając niniejszego maila:</p>
+<p>mail</p>
+<br>
+<h3>A kim jest Sylwek?</h3>
+<p>Jego tożsamości również nie możemy zdradzić. Zdradzimy jedynie, że mimo, że ta stronka powstała w formie żartu, on dobrze wie o jej istnieniu.
+Co więcej póki co się na nas nie obraził!</p>
+<br>
+<h3>Zamów własny projekt!</h3>
+<p>Nie żebramy o pieniądze. Strona ta powstała jako pewnego rodzaju projekt społeczny, aby zaspokoić nasze chore fantazje, ale także
+    nauka kodowania.
+Niemniej możesz nam niezwykle pomóc i wesprzeć stając się aktywnym członkiem sylwkastycznej społeczności. <strong>Możesz także zamówić u mnie własną witrynę
+        internetową, ale także projekt graficzny. :*</strong> Wiem, że może i jest to chamska reklama, niemniej nie będę kłamał, że potrzebuję
+pieniędzy na skyr i ryż. Jeśli byłbyś/byłabyś zainteresowany/a pisz śmiało na maila! Jak wygląda strona internetowa już widać, zamieszczę jednak poniżej
+przykładową autorską grafikę.</p>
+<br>
+
+<img src="{{ url_for('static', filename='images/mis.jpg') }}" width="480">
+
+
+
+{% endblock %}

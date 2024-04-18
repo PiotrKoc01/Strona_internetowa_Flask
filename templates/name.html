@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<br>
+<br>
+{% for message in get_flashed_messages() %}
+    <div class="alert alert-success fade show" role="alert">
+    {{ message }}
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+
+{% endfor %}
+
+
+<br>
+<br>
+
+{% if name %}
+    <h1> {{ name }}, witaj w sylwkastycznej społecznosci </h1>
+
+{% else %}
+    <h1> Jak myślisz, że Sylwek by Cię nazwał? </h1>
+    <br/>
+    <form method="POST">
+        {{ form.hidden_tag() }}
+
+        {{ form.name.label(class="form-label") }}
+        {{ form.name(class="form-control") }}
+        <br/>
+        {{ form.submit(class="btn btn-success") }}
+    </form>
+
+
+
+
+{% endif %}
+
+{% endblock %}

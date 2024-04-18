@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<br/>
+<br/>
+<h1>Poznaj swoją przyszłość dzięki Wróżce Sylwkuszce!</h1>
+<br>
+<br>
+<br>
+<h3>Twoja wróżba:</h3>
+<br>
+
+<button id="showPredictionButton" class="btn btn-success">Wróżko kochana dawaj mi moją przyszłość!</button>
+<br>
+<h4 id="predictionParagraph" style="display: none;"><strong>{{ wrozba }}</strong></h4>
+
+<script>
+    document.getElementById("showPredictionButton").addEventListener("click", function() {
+        document.getElementById("predictionParagraph").style.display = "block";
+    });
+</script>
+
+{% endblock %}
